@@ -1,6 +1,10 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const app = express();
+const riderRoutes = require('./routes/rider');
+const teamRoutes = require('./routes/team');
+const userRoutes = require('./routes/user');
+const path = require('path');
 
 
 mongoose.connect('mongodb+srv://rouziko:anzC0ZEuJb8yo4jp@cluster0.lr882tw.mongodb.net/test',
@@ -18,5 +22,9 @@ app.use((req, res, next) => {
     next();
 });
 
+app.use('/api/rider', riderRoutes);
+app.use('/api/team', teamRoutes);
+app.use('/api/auth', userRoutes);
+app.use('/images', express.static(path.join(__dirname, 'images')));
 
 module.exports = app;
