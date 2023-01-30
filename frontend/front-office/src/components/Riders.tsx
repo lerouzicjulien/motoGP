@@ -7,16 +7,17 @@ const Riders = () => {
     const {riders, isLoaded} = useContext(RidersContext);
 
     console.log(riders)
+    
     return(
-        <div className="riders" style={{"border": "solid blue 1px", "margin": "1em", "padding": "2em"}}>
-            <Typography variant="h3">Ici les Riders</Typography>
+        <div className="riders" style={{"border": "solid #1E4976 0.5px", "borderRadius":"10px", "margin": "1em", "padding": "2em", "backgroundColor":"#001E3D", "maxWidth": "40%"}}>
+            <Typography variant="h3">Riders</Typography>
             <Box className='ridersContainer' sx={{ display: 'flex', flexWrap: 'wrap', justifyContent:'center', padding:2}} >
                 {
                     isLoaded
                     ?
                       riders.map((rider) => (
                         <Card sx={{
-                            width: '15em',
+                            width: '13em',
                             m: 2,
                             p: 3,
                             display: 'flex',
@@ -28,12 +29,12 @@ const Riders = () => {
                             borderBottom: 3,
                             borderRadius: 5,
                             borderColor: 'white',
-                            // backgroundColor: backgroundColor,
-                            // '&:hover': {
+                            backgroundColor: '#007FFF',
+                            '&:hover': {
                             //     backgroundColor: hoverBackgroundColor,
-                            //     transform: 'scale(1.03)'
-                            // },
-                        }} >
+                                transform: 'scale(1.03)'
+                            },
+                        }} key={rider._id}>
                             <Avatar src={rider.imageUrl} sx={{
                                 width: '8em',
                                 height: '8em',

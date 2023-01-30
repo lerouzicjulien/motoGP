@@ -3,7 +3,7 @@ import { createContext, FC, PropsWithChildren, useEffect, useState } from "react
 export interface Teams {
     _id: string,
     name: string,
-    constructor: string,
+    factory: string,
     rider1: string,
     rider2: string,
     logoUrl: string

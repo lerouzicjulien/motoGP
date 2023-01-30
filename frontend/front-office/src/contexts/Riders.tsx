@@ -27,6 +27,8 @@ const RidersContextProvider : FC<PropsWithChildren>= ({ children }) => {
     const [ isLoaded, setIsLoaded ] = useState(false);
     const [ riders, setRiders ] = useState([]);
 
+    console.log(riders)
+
     useEffect(() => {
         fetch('http://localhost:3002/api/rider')
           .then(res => res.json())

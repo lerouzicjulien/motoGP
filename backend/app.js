@@ -5,9 +5,10 @@ const riderRoutes = require('./routes/rider');
 const teamRoutes = require('./routes/team');
 const userRoutes = require('./routes/user');
 const path = require('path');
+const db = require('./db.json');
 
 
-mongoose.connect('mongodb+srv://rouziko:anzC0ZEuJb8yo4jp@cluster0.lr882tw.mongodb.net/test',
+mongoose.connect(`mongodb+srv://${db.username}:${db.password}@cluster0.lr882tw.mongodb.net/test`,
   { useNewUrlParser: true,
     useUnifiedTopology: true })
   .then(() => console.log('Connexion à MongoDB réussie !'))
