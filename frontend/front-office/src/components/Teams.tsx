@@ -6,9 +6,8 @@ const Teams = () => {
     const { teams, isLoaded } = useContext(TeamsContext);
 
     return(
-        <div className="teams" style={{"margin": ".4em", "padding": "1em", "maxWidth": "38%"}}>
-            <Typography variant="h3" sx={{ mt: '.5em'}}>TEAMS</Typography>
-            <Box className='teamsContainer' sx={{ display: 'flex', flexWrap: 'wrap', justifyContent:'center', padding:2}} >
+        <div className="teams" >
+            <Box className='teamsContainer' sx={{ display: 'flex', flexWrap: 'wrap', justifyContent:'center', padding:1}} >
                 {
                     isLoaded
                     ?
@@ -28,7 +27,7 @@ const Teams = () => {
                                 borderColor: `${team.teamColor}`,
                                 backgroundColor: '#252527',
                                 '&:hover': {
-                                    backgroundColor: '#007FFF',
+                                    backgroundColor: '#D70041',
                                     transform: 'scale(1.03)'
                                 },
                             }} key={team._id}>

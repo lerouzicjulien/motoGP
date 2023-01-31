@@ -2,15 +2,13 @@ import { Avatar, Box, Card, CircularProgress, Typography } from "@mui/material";
 import { useContext } from "react";
 import { RidersContext } from "../contexts/Riders";
 
+
 const Riders = () => {
 
     const {riders, isLoaded} = useContext(RidersContext);
-
-    console.log(riders)
     
     return(
-        <div className="riders" style={{"margin": ".4em", "padding": "1em", "maxWidth": "55%"}}>
-            <Typography variant="h3" sx={{mt: '.5em'}}>RIDERS</Typography>
+        <div className="riders" >
             <Box className='ridersContainer' sx={{ display: 'flex', flexWrap: 'wrap', justifyContent:'center', padding:1}} >
                 {
                     isLoaded
@@ -31,7 +29,7 @@ const Riders = () => {
                             borderColor: `${rider.teamColor}`,
                             backgroundColor: '#252527',
                             '&:hover': {
-                                backgroundColor: '#007FFF',
+                                backgroundColor: '#D70041',
                                 transform: 'scale(1.03)'
                             },
                         }} key={rider._id}>
@@ -53,8 +51,6 @@ const Riders = () => {
                     :
                       <CircularProgress size={300} />
                 }
-               
-
             </Box>
         </div>
     )
