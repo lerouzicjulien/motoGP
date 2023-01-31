@@ -6,47 +6,47 @@ const Teams = () => {
     const { teams, isLoaded } = useContext(TeamsContext);
 
     return(
-        <div className="teams" style={{"border": "solid #1E4976 0.5px", "borderRadius":"10px", "margin": "1em", "padding": "2em", "backgroundColor":"#001E3D", "maxWidth": "40%"}}>
-            <Typography variant="h3">Teams</Typography>
+        <div className="teams" style={{"margin": ".4em", "padding": "1em", "maxWidth": "38%"}}>
+            <Typography variant="h3" sx={{ mt: '.5em'}}>TEAMS</Typography>
             <Box className='teamsContainer' sx={{ display: 'flex', flexWrap: 'wrap', justifyContent:'center', padding:2}} >
                 {
                     isLoaded
                     ?
                         teams.map((team) => (
                             <Card sx={{
-                                width: '13em',
+                                width: '35em',
                                 m: 2,
                                 p: 3,
                                 display: 'flex',
                                 flexDirection: 'column',
                                 alignItems: 'center',
                                 justifyContent: 'space-around',
-                                // color: 'white',
-                                borderRight: 3,
-                                borderBottom: 3,
+                                color: 'white',
+                                borderRight: 4,
+                                borderBottom: 4,
                                 borderRadius: 5,
-                                borderColor: 'white',
-                                backgroundColor: '#007FFF',
+                                borderColor: `${team.teamColor}`,
+                                backgroundColor: '#252527',
                                 '&:hover': {
-                                //     backgroundColor: hoverBackgroundColor,
+                                    backgroundColor: '#007FFF',
                                     transform: 'scale(1.03)'
                                 },
                             }} key={team._id}>
-                                <Avatar src={team.logoUrl} sx={{
-                                    width: '8em',
-                                    height: '8em',
-                                    border: 'solid 8px white',
+                                <Avatar src={team.logoUrl} variant="rounded" sx={{
+                                    width: '10em',
+                                    height: '10em',
+                                    border: `solid 3px ${team.teamColor}`,
                                     boxShadow: 10
                                 }}/>
-                                <Typography variant='h4' sx={{
+                                <Typography variant='h3' sx={{
                                     marginTop: 1,
                                     textAlign: 'center',
                                     textShadow: 5,
-                                    fontFamily: 'revert'
+                                    fontSize: '2.2em'
                                 }}>{team.name}</Typography>
                                 <Typography variant="h6">{team.factory}</Typography>
-                                <Typography variant="h6">{team.rider1}</Typography>
-                                <Typography variant="h6">{team.rider2}</Typography>
+                                {/* <Typography variant="h5">riders : {team.rider1}</Typography>
+                                <Typography variant="h5">{team.rider2}</Typography> */}
                             </Card>
                         ))
 

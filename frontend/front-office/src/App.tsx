@@ -10,7 +10,7 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <div className='container' style={{"border": "solid black 1px", "display": "flex", "justifyContent": "space-around", "padding": "2em", "margin": "3em"}}>
+      <div className='container' style={{"display": "flex", "justifyContent": "space-around", "padding": "1em"}}>
         <RidersContextProvider>
           <Riders />
         </RidersContextProvider>

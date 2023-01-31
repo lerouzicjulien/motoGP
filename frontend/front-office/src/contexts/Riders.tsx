@@ -12,7 +12,8 @@ export interface Riders {
     wins: number,
     podium: number,
     title: number,
-    imageUrl: string
+    imageUrl: string,
+    teamColor: string
 };
 
 export const RidersContext = createContext<{

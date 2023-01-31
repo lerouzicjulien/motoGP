@@ -11,7 +11,8 @@ const riderSchema = mongoose.Schema({
     wins: {type: Number, required: true},
     podium: {type: Number, required: true},
     title: {type: Number, required: true},
-    imageUrl: {type: String, required: true}
+    imageUrl: {type: String, required: true},
+    teamColor: {type: String, required: true}
 })
 
 module.exports = mongoose.model('Rider', riderSchema);

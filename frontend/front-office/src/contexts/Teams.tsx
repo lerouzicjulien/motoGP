@@ -6,7 +6,8 @@ export interface Teams {
     factory: string,
     rider1: string,
     rider2: string,
-    logoUrl: string
+    logoUrl: string,
+    teamColor: string
 };
 
 export const TeamsContext = createContext<{

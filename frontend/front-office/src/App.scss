@@ -1,9 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap');
+
 body{
-  background-color: #071A2E;
+  background-color: black;
+  font-family: 'Noto Sans Japanese';
 }
+
 .App {
   text-align: center;
   margin: 0;
-  padding: 2em;
+  padding-top: 2em;
   color: white;
 }
